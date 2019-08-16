@@ -5,6 +5,7 @@ import requests
 import sys
 import subprocess
 import os
+import time
 from bs4 import BeautifulSoup
 
 # Variables
@@ -46,6 +47,7 @@ if Path == "":
 else:
   mediainfo_enabled = True
   tmp = subprocess.Popen('mediainfo --Logfile=/root/.nfo "{}"'.format(Path), stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+  time.sleep(5) # Wait 5s for the nfo file to populate properly
   with open('/root/.nfo', 'r', encoding='utf-8') as nfo_file:
     nfo = nfo_file.readlines()
     del nfo[1]
