@@ -15,7 +15,7 @@ api_key = '' #@param {type:"string"}
 #@markdown ---
 #@markdown ###IMDB Information
 IMDB_URL_OR_ID = '' #@param {type:"string"}
-imdb_pattern = re.compile('tt\d{7,8}')
+imdb_pattern = re.compile('(tt\d{7,8})')
 youtube_pattern = re.compile('(https?://)?(www\.)?(youtube|youtu|youtube-nocookie)\.(com|be)/(watch\?v=|embed/|v/|.+\?v=)?(?P<id>[A-Za-z0-9\-=_]{11})')
 imdb_id = re.findall(imdb_pattern, IMDB_URL_OR_ID)[0]
 
