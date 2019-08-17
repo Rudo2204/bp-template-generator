@@ -11,7 +11,10 @@ jikan = Jikan()
 #@markdown ###MAL Information
 Anime_URL_OR_ID = '' #@param {type: "string"}
 mal_pattern = re.compile('(anime)?/(\d{1,7})/(.+)?')
-mal_id = re.findall(mal_pattern, Anime_URL_OR_ID)[0][1]
+if re.match(r'\d+', Anime_URL_OR_ID):
+  mal_id = Anime_URL_OR_ID
+else:
+  mal_id = re.findall(mal_pattern, Anime_URL_OR_ID)[0][1]
 youtube_pattern = re.compile('(https?://)?(www\.)?(youtube|youtu|youtube-nocookie)\.(com|be)/(watch\?v=|embed/|v/|.+\?v=)?(?P<id>[A-Za-z0-9\-=_]{11})')
 
 def get_mal_template(mal_id):
