@@ -96,33 +96,33 @@ def get_imdb_template(imdb_id):
       text_dump += "[img]{}[/img]\n".format(i)
     text_dump += "[/spoiler]"
   text_dump += "[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Movie Info[/b][/color][/size][/indent]\n"
-  text_dump += "[LIST][*][color=rgb(251, 160, 38)]Rating:[/color] {}\n".format(imdb_data['Rated'])
-  text_dump += "[*][color=rgb(251, 160, 38)]Genre:[/color] {}\n".format(imdb_data['Genre'])
-  text_dump += "[*][color=rgb(251, 160, 38)]Directed By:[/color] {}\n".format(imdb_data['Director'])
-  text_dump += "[*][color=rgb(251, 160, 38)]Written By:[/color] {}\n".format(imdb_data['Writer'])
-  text_dump += "[*][color=rgb(251, 160, 38)]Starring:[/color] {}\n".format(imdb_data['Actors'])
-  text_dump += "[*][color=rgb(251, 160, 38)]Release Date:[/color] {}\n".format(imdb_data['Released'])
+  text_dump += "[LIST][*][color=rgb(255, 204, 0)]Rating:[/color] {}\n".format(imdb_data['Rated'])
+  text_dump += "[*][color=rgb(255, 204, 0)]Genre:[/color] {}\n".format(imdb_data['Genre'])
+  text_dump += "[*][color=rgb(255, 204, 0)]Directed By:[/color] {}\n".format(imdb_data['Director'])
+  text_dump += "[*][color=rgb(255, 204, 0)]Written By:[/color] {}\n".format(imdb_data['Writer'])
+  text_dump += "[*][color=rgb(255, 204, 0)]Starring:[/color] {}\n".format(imdb_data['Actors'])
+  text_dump += "[*][color=rgb(255, 204, 0)]Release Date:[/color] {}\n".format(imdb_data['Released'])
   try:
-    text_dump += "[*][color=rgb(251, 160, 38)]Runtime:[/color] {}\n".format(imdb_data['Runtime'])
+    text_dump += "[*][color=rgb(255, 204, 0)]Runtime:[/color] {}\n".format(imdb_data['Runtime'])
   except:
-    text_dump += "[*][color=rgb(251, 160, 38)]Runtime:[/color] N/A\n"
+    text_dump += "[*][color=rgb(255, 204, 0)]Runtime:[/color] N/A\n"
   try:
-    text_dump += "[*][color=rgb(251, 160, 38)]On Disk/Streaming:[/color] {}\n".format(imdb_data['DVD'])
+    text_dump += "[*][color=rgb(255, 204, 0)]On Disk/Streaming:[/color] {}\n".format(imdb_data['DVD'])
   except:
-    text_dump += "[*][color=rgb(251, 160, 38)]On Disk/Streaming:[/color] N/A\n"
+    text_dump += "[*][color=rgb(255, 204, 0)]On Disk/Streaming:[/color] N/A\n"
   try:
-    text_dump += "[*][color=rgb(251, 160, 38)]Box Office:[/color] {}\n".format(imdb_data['BoxOffice'])
+    text_dump += "[*][color=rgb(255, 204, 0)]Box Office:[/color] {}\n".format(imdb_data['BoxOffice'])
   except:
-    text_dump += "[*][color=rgb(251, 160, 38)]Box Office:[/color] N/A\n"
-  text_dump += "[*][color=rgb(251, 160, 38)]Awards:[/color] {}\n".format(imdb_data['Awards'])
+    text_dump += "[*][color=rgb(255, 204, 0)]Box Office:[/color] N/A\n"
+  text_dump += "[*][color=rgb(255, 204, 0)]Awards:[/color] {}\n".format(imdb_data['Awards'])
   try:
-    text_dump += "[*][color=rgb(251, 160, 38)]Studio:[/color] {}[/LIST]\n".format(imdb_data['Production'])
+    text_dump += "[*][color=rgb(255, 204, 0)]Studio:[/color] {}[/LIST]\n".format(imdb_data['Production'])
   except:
-    text_dump += "[*][color=rgb(251, 160, 38)]Studio:[/color] N/A[/LIST]\n"
+    text_dump += "[*][color=rgb(255, 204, 0)]Studio:[/color] N/A[/LIST]\n"
   if mediainfo_enabled:
     text_dump += "[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Media Info[/b][/color][/size][/indent]\n"
     text_dump += "[spoiler='Click here to view Media Info'][code]{}[/code][/spoiler]\n".format(nfo)
-  text_dump += "[hr][/hr][center][size=6][color=rgb(209, 72, 65)][b]Download Link[/b][/color][/size][/center]\n"
+  text_dump += "[hr][/hr][center][size=6][color=rgb(250, 197, 28)][b]Download Link[/b][/color][/size][/center]\n"
   if Thanks:
     if Likes != 0 and Posts == 0:
       text_dump += "[center][thanks][likes={}]{}[/likes][/thanks][/center]".format(Likes, Link)

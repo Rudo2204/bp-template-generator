@@ -79,21 +79,21 @@ def get_mal_template(mal_id):
       text_dump += "[img]{}[/img]\n".format(i)
     text_dump += "[/spoiler]"
   text_dump += "[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Anime Info[/b][/color][/size][/indent]\n"
-  text_dump += "[LIST][*][color=rgb(251, 160, 38)]Rating:[/color] {}\n".format(anime_data['rating'])
-  text_dump += "[*][color=rgb(251, 160, 38)]Type:[/color] {}\n".format(anime_data['type'])
-  text_dump += "[*][color=rgb(251, 160, 38)]Episodes:[/color] {}\n".format(anime_data['episodes'])
-  text_dump += "[*][color=rgb(251, 160, 38)]Status:[/color] {}\n".format(anime_data['status'])
-  text_dump += "[*][color=rgb(251, 160, 38)]Aired:[/color] {}\n".format(anime_data['aired']['string'])
-  text_dump += "[*][color=rgb(251, 160, 38)]Premiered:[/color] {}\n".format(anime_data['premiered'])
-  text_dump += "[*][color=rgb(251, 160, 38)]Producers:[/color] {}\n".format(get_info(anime_data, 'producers'))
-  text_dump += "[*][color=rgb(251, 160, 38)]Studios:[/color] {}\n".format(get_info(anime_data, 'studios'))
-  text_dump += "[*][color=rgb(251, 160, 38)]Source:[/color] {}\n".format(anime_data['source'])
-  text_dump += "[*][color=rgb(251, 160, 38)]Genres:[/color] {}\n".format(get_info(anime_data, 'genres'))
-  text_dump += "[*][color=rgb(251, 160, 38)]Duration:[/color] {}\n".format(anime_data['duration'])
+  text_dump += "[LIST][*][color=rgb(255, 204, 0)]Rating:[/color] {}\n".format(anime_data['rating'])
+  text_dump += "[*][color=rgb(255, 204, 0)]Type:[/color] {}\n".format(anime_data['type'])
+  text_dump += "[*][color=rgb(255, 204, 0)]Episodes:[/color] {}\n".format(anime_data['episodes'])
+  text_dump += "[*][color=rgb(255, 204, 0)]Status:[/color] {}\n".format(anime_data['status'])
+  text_dump += "[*][color=rgb(255, 204, 0)]Aired:[/color] {}\n".format(anime_data['aired']['string'])
+  text_dump += "[*][color=rgb(255, 204, 0)]Premiered:[/color] {}\n".format(anime_data['premiered'])
+  text_dump += "[*][color=rgb(255, 204, 0)]Producers:[/color] {}\n".format(get_info(anime_data, 'producers'))
+  text_dump += "[*][color=rgb(255, 204, 0)]Studios:[/color] {}\n".format(get_info(anime_data, 'studios'))
+  text_dump += "[*][color=rgb(255, 204, 0)]Source:[/color] {}\n".format(anime_data['source'])
+  text_dump += "[*][color=rgb(255, 204, 0)]Genres:[/color] {}\n".format(get_info(anime_data, 'genres'))
+  text_dump += "[*][color=rgb(255, 204, 0)]Duration:[/color] {}\n".format(anime_data['duration'])
   if mediainfo_enabled:
     text_dump += "[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Media Info[/b][/color][/size][/indent]\n"
     text_dump += "[spoiler='Click here to view Media Info'][code]{}[/code][/spoiler]\n".format(nfo)
-  text_dump += "[hr][/hr][center][size=6][color=rgb(209, 72, 65)][b]Download Link[/b][/color][/size][/center]\n"
+  text_dump += "[hr][/hr][center][size=6][color=rgb(250, 197, 28)][b]Download Link[/b][/color][/size][/center]\n"
   if Thanks:
     if Likes != 0 and Posts == 0:
       text_dump += "[center][thanks][likes={}]{}[/likes][/thanks][/center]".format(Likes, Link)
