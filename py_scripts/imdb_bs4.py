@@ -6,6 +6,7 @@ import sys
 import subprocess
 import os
 import time
+from IPython.display import clear_output
 from bs4 import BeautifulSoup
 
 # Variables

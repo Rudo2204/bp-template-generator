@@ -4,6 +4,7 @@ import os
 import time
 import subprocess
 from bs4 import BeautifulSoup
+from IPython.display import clear_output
 from jikanpy import Jikan
 
 jikan = Jikan()
