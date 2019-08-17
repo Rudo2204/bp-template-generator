@@ -65,20 +65,20 @@ def get_mal_template(mal_id):
   text_dump += "[color=rgb(250, 197, 28)][b][size=6]{} ({} - {})[/size][/b][/color]\n".format(anime_data['title'], anime_data['type'], anime_data['premiered'])
   text_dump += "[url={}][img]https://i.imgur.com/YJgzM4V.png[/img][/url][size=6][b] {}[/b]/10[/size]".format(anime_data['url'], anime_data['score'])
   text_dump += "[size=6] --- [img]https://i.imgur.com/sEpKj3O.png[/img]{}[/size][/center]\n".format(anime_data['scored_by'])
-  text_dump += "[hr][/hr][indent][size=6][color=rgb(147, 101, 184)][b]Synopsis[/b][/color][/size][/indent]\n"
-  text_dump += "[color=rgb(26, 188, 156)]{}\n[/color]".format(anime_data['synopsis'])
+  text_dump += "[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Synopsis[/b][/color][/size][/indent]\n"
+  text_dump += "{}\n".format(anime_data['synopsis'])
   try:
-    text_dump += "[hr][/hr][indent][size=6][color=rgb(147, 101, 184)][b]Trailer[/b][/color][/size][/indent]\n"
+    text_dump += "[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Trailer[/b][/color][/size][/indent]\n"
     text_dump += "[media=youtube]{}[/media]\n".format(re.match(youtube_pattern, str(anime_data['trailer_url'])).group(6))
   except:
     pass
   if screenshot_enabled:
-    text_dump += "[hr][/hr][indent][size=6][color=rgb(147, 101, 184)][b]Screenshot[/b][/color][/size][/indent]\n"
+    text_dump += "[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Screenshot[/b][/color][/size][/indent]\n"
     text_dump += "[spoiler='Click here to view screenshots']\n"
     for i in screenshot_list:
       text_dump += "[img]{}[/img]\n".format(i)
     text_dump += "[/spoiler]"
-  text_dump += "[hr][/hr][indent][size=6][color=rgb(147, 101, 184)][b]Anime Info[/b][/color][/size][/indent]\n"
+  text_dump += "[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Anime Info[/b][/color][/size][/indent]\n"
   text_dump += "[LIST][*][color=rgb(251, 160, 38)]Rating:[/color] {}\n".format(anime_data['rating'])
   text_dump += "[*][color=rgb(251, 160, 38)]Type:[/color] {}\n".format(anime_data['type'])
   text_dump += "[*][color=rgb(251, 160, 38)]Episodes:[/color] {}\n".format(anime_data['episodes'])
@@ -91,7 +91,7 @@ def get_mal_template(mal_id):
   text_dump += "[*][color=rgb(251, 160, 38)]Genres:[/color] {}\n".format(get_info(anime_data, 'genres'))
   text_dump += "[*][color=rgb(251, 160, 38)]Duration:[/color] {}\n".format(anime_data['duration'])
   if mediainfo_enabled:
-    text_dump += "[hr][/hr][indent][size=6][color=rgb(147, 101, 184)][b]Media Info[/b][/color][/size][/indent]\n"
+    text_dump += "[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Media Info[/b][/color][/size][/indent]\n"
     text_dump += "[spoiler='Click here to view Media Info'][code]{}[/code][/spoiler]\n".format(nfo)
   text_dump += "[hr][/hr][center][size=6][color=rgb(209, 72, 65)][b]Download Link[/b][/color][/size][/center]\n"
   if Thanks:

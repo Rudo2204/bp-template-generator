@@ -84,18 +84,18 @@ def get_imdb_template(imdb_id):
   text_dump += "[color=rgb(250, 197, 28)][b][size=6]{} ({})[/size][/b][/color]\n".format(imdb_data['Title'], imdb_data['Year'])
   text_dump += "[url=https://www.imdb.com/title/{}][img]https://i.imgur.com/rcSipDw.png[/img][/url][size=6][b] {}[/b]/10[/size]".format(imdb_id, imdb_data['imdbRating'])
   text_dump += "[size=6] --- [img]https://i.imgur.com/sEpKj3O.png[/img]{}[/size][/center]\n".format(imdb_data['imdbVotes'])
-  text_dump += "[hr][/hr][indent][size=6][color=rgb(147, 101, 184)][b]Plot Summary[/b][/color][/size][/indent]\n"
-  text_dump += "[color=rgb(26, 188, 156)]{}\n[/color]".format(get_story_line(imdb_id))
+  text_dump += "[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Plot Summary[/b][/color][/size][/indent]\n"
+  text_dump += "{}\n".format(get_story_line(imdb_id))
   if trailer_enabled:
-    text_dump += "[hr][/hr][indent][size=6][color=rgb(147, 101, 184)][b]Trailer[/b][/color][/size][/indent]\n"
+    text_dump += "[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Trailer[/b][/color][/size][/indent]\n"
     text_dump += "[media=youtube]{}[/media]\n".format(youtube_match.group(6))
   if screenshot_enabled:
-    text_dump += "[hr][/hr][indent][size=6][color=rgb(147, 101, 184)][b]Screenshot[/b][/color][/size][/indent]\n"
+    text_dump += "[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Screenshot[/b][/color][/size][/indent]\n"
     text_dump += "[spoiler='Click here to view screenshots']\n"
     for i in screenshot_list:
       text_dump += "[img]{}[/img]\n".format(i)
     text_dump += "[/spoiler]"
-  text_dump += "[hr][/hr][indent][size=6][color=rgb(147, 101, 184)][b]Movie Info[/b][/color][/size][/indent]\n"
+  text_dump += "[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Movie Info[/b][/color][/size][/indent]\n"
   text_dump += "[LIST][*][color=rgb(251, 160, 38)]Rating:[/color] {}\n".format(imdb_data['Rated'])
   text_dump += "[*][color=rgb(251, 160, 38)]Genre:[/color] {}\n".format(imdb_data['Genre'])
   text_dump += "[*][color=rgb(251, 160, 38)]Directed By:[/color] {}\n".format(imdb_data['Director'])
@@ -120,7 +120,7 @@ def get_imdb_template(imdb_id):
   except:
     text_dump += "[*][color=rgb(251, 160, 38)]Studio:[/color] N/A[/LIST]\n"
   if mediainfo_enabled:
-    text_dump += "[hr][/hr][indent][size=6][color=rgb(147, 101, 184)][b]Media Info[/b][/color][/size][/indent]\n"
+    text_dump += "[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Media Info[/b][/color][/size][/indent]\n"
     text_dump += "[spoiler='Click here to view Media Info'][code]{}[/code][/spoiler]\n".format(nfo)
   text_dump += "[hr][/hr][center][size=6][color=rgb(209, 72, 65)][b]Download Link[/b][/color][/size][/center]\n"
   if Thanks:
